@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+#  Tour Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A robust and efficient **Tour Management System** built with **TypeScript**, **Express.js**, and **MongoDB**.
+This project efficiently manages tours, bookings, customers, and schedules using RESTful APIs with strong typing, modular architecture, and clean Mongoose models.
 
-Currently, two official plugins are available:
+🌐 **Live URL:** [Tour Management System](https://tour-management-system-jade.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🧭 **Tour Management** — Create, update, and list tour packages 
+- 👤 **Customer Management** – Register and manage customer information
+- 🗓️ **Booking System** – Book tours and manage availability
+- 🔐 **Secure API** – Strong typing, validation, and layered security 
+- ⚙️ **Scalable Structure** – Modular services, controllers, and routes
+- 💾 **MongoDB Integration** – Efficient and structured data handling with Mongoose
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Technology | Description |
+|-------------|-------------|
+| **Node.js** | JavaScript runtime environment |
+| **Express.js** | Backend framework for Node.js |
+| **TypeScript** | Superset of JavaScript providing static typing |
+| **MongoDB** | NoSQL database |
+| **Mongoose** | ODM (Object Data Modeling) library for MongoDB |
+| **dotenv** | Environment variable management |
+| **ts-node-dev** | Development server with auto-restart on file changes |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/library-management-assignment-03.git
+cd library-management-assignment-03 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
+### 3️⃣ Create a .env file
+```bash
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+```
+### 4️⃣ Run the development server
+```bash
+npm run dev
 ```
